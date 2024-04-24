@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Client DashBoard</title>
-<link rel="stylesheet" href="ClientIndexStyles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appoint-Mint Client Dash</title>
+    <link rel="stylesheet" href="ClientIndexStyles.css">
 </head>
 <body>
-    <div class="navbar">
-        <ul>
-          <li>Schedule</li>
-          <li>Appointments</li>
-          <li>Profile</li>
-        </ul>
-        <div class="logo">Appoint-Mint Client</div>
-        <a href="BusinessProfile.html" class="update-button">UPDATE BUSINESS</a>
-      </div>
-
-      <div class="schedule">
-          <h1>Today's Schedule (April 17, 2024)</h1>
-  <div id="schedule-container"></div>
-
-  <script src="script.js"></script>
-      </div>
+  <header class="TopHeader">
+    Appoint-Mint Client Dash
+  </header>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Appointments</a></li>
+                    <li><a href="BusinessProfile.html">Update Business</a></li>
+                    <li><a href="ClientProfile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="today-schedule">
+            <h2>Today's Schedule</h2>
+            <div class="schedule-container">
+                <div class="time-slot">
+                    <span class="time">9:00 AM</span>
+                    <div class="appointment">
+                        </div>
+                </div>
+                <div class="time-slot">
+                    <span class="time">9:30 AM</span>
+                    <div class="appointment">
+                        </div>
+                </div>
+                <div class="time-slot">
+                    <span class="time">5:00 PM</span>
+                    <div class="appointment">
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="appointment-calendar">
+            <h2>Appointments Calendar</h2>
+            <div class="calendar-container">
+                <button class="arrow">&#8592;</button> <div class="calendar-header">
+                    <span>April 21 - April 27, 2024</span>
+                </div>
+                <button class="arrow">&#8594;</button> <div class="days-of-week">
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                </div>
+                <div class="calendar-grid">
+                    </div>
+            </div>
+        </section>
+    </main>
 </body>
+</html>
+

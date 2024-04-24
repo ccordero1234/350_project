@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appoint-Mint Customer Dash</title>
+    <link rel="stylesheet" href="CustomerStyle.css">
+</head>
+<body>
+
+<header>
+    Appoint-Mint Customer Dash
+</header>
+
+<section id="profile">
+    <button>Profile</button>
+</section>
+
+<section id="upcoming-appointments">
+    <h2>Upcoming Appointments</h2>
+
+    <!-- Appointment 1 -->
+    <div class="appointment">
+        <img src="{{businessLogo1}}" alt="{{businessName1}} Logo"> <!-- Dynamic Image Source -->
+        <p>{{businessName1}}</p> <!-- Dynamic Content -->
+        <p>{{businessAddress1}}</p> <!-- Dynamic Content -->
+        <p>{{appointmentDateAndTime1}}</p> <!-- Dynamic Content -->
+    </div>
+
+     <!-- Appointment 2 -->
+     <div class="appointment">
+        <img src="{{businessLogo2}}" alt="{{businessName2}} Logo"> <!-- Dynamic Image Source -->
+        <p>{{businessName2}}</p> <!-- Dynamic Content -->
+        <p>{{businessAddress2}}</p> <!-- Dynamic Content -->
+        <p>{{appointmentDateAndTime2}}</p> <!-- Dynamic Content -->
+     </div>
+
+     <!-- More appointments can be added similarly -->
+
+</section>
+
+<section id="browse-new-businesses">
+  	<h3>Browse New Businesses</h3>
+
+  	<!-- Business 1-->
+  	<div class='new-business'>
+  		<img src='{{newBusinessLogo1}}' alt='{{newBusinessName1}} logo'> 
+  		<p>{{newBusinessName1}}</p>
+  		<p>{{newBusinessAddress1}}</p>
+  		<p>{{newBusinessDescription1}}</p>
+  	</div>
+
+  	<!-- Business 2-->
+  	<div class='new-business'>
+  		<img src='{{newBusinessLogo2}}' alt='{{newBusinessName2}} logo'> 
+  		<p>{{newBusinessName2}}</p>
+  		<p>{{newBusinessAddress2}}</p>
+  		<p>{{newBusinessDescription2}}</p>
+  	</div>
+
+  	<!-- More businesses can be added similarly -->
+
+</section>
+
+</body>
+</html>
