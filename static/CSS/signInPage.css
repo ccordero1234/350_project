@@ -68,20 +68,6 @@ a {
     text-align: center;
 }
 
-.social-container {
-    margin: 20px 0;
-}
-
-.social-container a {
-    border: 1px solid var(--grey);
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-    height: 40px;
-    width: 40px;
-}
 
 .form-container input {
     background: #eee;
@@ -223,13 +209,4 @@ button.ghost {
 .footer {
     margin-top: 25px;
     text-align: center;
-}
-
-
-.icons {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    letter-spacing: 15px;
-    align-items: center;
 }

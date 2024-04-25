@@ -1,0 +1,163 @@
+:root {
+    --green: #99D19C;
+    --grey: #383D3B;
+}
+
+* {
+    margin: 0px;
+}
+
+img {
+    height: 20vh;
+    width: auto;
+}
+
+header,
+footer {
+    background-color: var(--green);
+    color: var(--grey);
+}
+
+header {
+    height: max(7.2vh, 45px);
+}
+
+nav ul,
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: min(14px, 4vw);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav .active a,
+nav a:hover {
+    background-color: #224b24;
+    color: var(--green);
+}
+
+.body-section {
+    display: flex;
+}
+
+.business {
+    width: calc(20% - 20px);
+    /* 20% width with a margin of 10px on each side */
+    margin: 10px;
+}
+
+.business img {
+    width: auto;
+    height: 20vh;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+p {
+    color: #666;
+}
+
+.upload-btn {
+    background-color: #99d19c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.upload-btn:hover {
+    background-color: #74ca79;
+}
+
+.form-container {
+    background-color: #fff;
+    width: 80%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    background-color: #99d19c;
+    padding: 10px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+select,
+button {
+    width: 100%;
+    padding: 7px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Include padding and border in element's width and height */
+}
+
+button {
+    background-color: #99d19c;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #74ca79;
+}
+
+.time-picker-container {
+    background-color: #fff;
+    width: 80%;
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.time-picker {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Include padding and border in element's width and height */
+}
+
+.checkbox {
+    display: inline-block;
+    padding: 10px;
+}
