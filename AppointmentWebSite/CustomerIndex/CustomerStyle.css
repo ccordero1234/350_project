@@ -1,0 +1,77 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set primary color */
+body {
+    background-color: #99d19c;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Profile button styling */
+#profile button {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 20px
+}
+
+/* Upcoming appointments section styling */
+#upcoming-appointments {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.appointment {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%; /* Adjust width as needed */
+    margin-right: 2%;
+    border-bottom: 1px solid #ddd;
+}
+
+.appointment img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+}
+
+/* Browse new businesses section styling */
+#browse-new-businesses {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.new-business {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin-right: 2%;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.new-business img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+}
