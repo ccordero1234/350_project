@@ -22,50 +22,18 @@
     <div>
         <div class="form-container">
             <h1 id="businessName"></h1>
-            <form id="businessForm">
-                <label for="openTime">Open Time</label>
-                <input class="time-picker" type="time" id="timeOpen" name="timeOpen">
-                <!-- Options for open time -->
-        
-                <label for="closeTime">Close Time</label>
-                <input class="time-picker" type="time" id="timeClose" name="timeClose">
-        
+            <form id="availablityForm">
                 <fieldset>
-                    <legend>Day Availability</legend>
-                    <!-- Repeat for each day of the week -->
-                    <div class="checkbox">
-                        <label for="monday">Monday</label>
-                        <input type="checkbox" id="monday" name="days[]" value="Monday">
-                    </div>
-                    <div class="checkbox">
-                        <label for="Tuesday">Tuesday</label>
-                        <input type="checkbox" id="Tuesday" name="days[]" value="Tuesday">
-                    </div>
-                    <div class="checkbox">
-                        <label for="Wednesday">Wednesday</label>
-                        <input type="checkbox" id="Wednesday" name="days[]" value="Wednesday">
-                    </div>
-                    <div class="checkbox">
-                        <label for="Thursday">Thursday</label>
-                        <input type="checkbox" id="Thursday" name="days[]" value="Thursday">
-                    </div>
-                    <div class="checkbox">
-                        <label for="Friday">Friday</label>
-                        <input type="checkbox" id="Friday" name="days[]" value="Friday">
-                    </div>
-                    <div class="checkbox">
-                        <label for="Saturday">Saturday</label>
-                        <input type="checkbox" id="Saturday" name="days[]" value="Saturday">
-                    </div>
-                    <div class="checkbox">
-                        <label for="Sunday">Sunday</label>
-                        <input type="checkbox" id="Sunday" name="days[]" value="Sunday">
-                    </div>
-                    <!-- ... other days ... -->
+                    <legend id="date-range" class="date-range"></legend>
+                    <select name="availableDays" id="availableDays">
+
+                    </select>
                 </fieldset>
-        
-                <button type="submit">Submit</button>
+                <button type="submit">Check Availablity</button>
             </form>
+            <div id="times">
+
+            </div>
     </div>
     <script src="../dist/bookAppointment.js"></script>
 </body>
