@@ -48,9 +48,6 @@ nav a:hover {
 .business {
     display: flex;
     flex-direction: column;
-    width: calc(20% - 20px);
-    /* 20% width with a margin of 10px on each side */
-    margin: 10px;
 }
 
 .business .active ,
@@ -90,7 +87,7 @@ footer {
     width: 100%;
 }
 .container {
-    display: flex;
-    flex-direction: row;
-    gap: max(2vw, 2px);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3vw;
 }

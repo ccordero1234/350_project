@@ -43,8 +43,7 @@ document.getElementById('businessForm').addEventListener('submit', function (eve
                         open: document.getElementById('timeOpen').value,
                         close: document.getElementById('timeClose').value,
                         daysOpen: daysOpen,
-                        imageURL: downloadURL,
-                        appointments: {}
+                        imageURL: downloadURL
                         // Add more fields as needed
                     };
 

@@ -49,23 +49,6 @@ nav a:hover {
     color: var(--green);
 }
 
-.body-section {
-    display: flex;
-}
-
-.business {
-    width: calc(20% - 20px);
-    /* 20% width with a margin of 10px on each side */
-    margin: 10px;
-}
-
-.business img {
-    width: auto;
-    height: 20vh;
-}
-
-
-
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -76,18 +59,6 @@ body {
 
 p {
     color: #666;
-}
-
-.upload-btn {
-    background-color: #99d19c;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.upload-btn:hover {
-    background-color: #74ca79;
 }
 
 .form-container {
@@ -114,7 +85,6 @@ label {
     margin-top: 10px;
 }
 
-input[type="text"],
 select,
 button {
     width: 100%;
@@ -138,26 +108,20 @@ button:hover {
     background-color: #74ca79;
 }
 
-.time-picker-container {
-    background-color: #fff;
-    width: 80%;
-    max-width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    padding-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#times {
+    display: none;
+    padding-top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
-.time-picker {
-    width: 100%;
-    padding: 7px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    /* Include padding and border in element's width and height */
+.time-slot {
+    height: 7vh;
+    align-content: center;
 }
 
-.checkbox {
-    display: inline-block;
-    padding: 10px;
+.time-slot:hover {
+    border: 2px solid #224b24;
+    background-color: var(--green);
 }

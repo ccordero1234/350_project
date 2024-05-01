@@ -71,7 +71,7 @@ async function loadInitialBusinesses(num) {
 // Load initial businesses when the page loads
 window.onload = async function () {
     try {
-        const initialBusinesses = await loadInitialBusinesses(5);
+        const initialBusinesses = await loadInitialBusinesses(10);
 
         // Populate HTML with initial data
         initialBusinesses.forEach((doc) => {
