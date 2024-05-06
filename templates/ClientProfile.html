@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client's Profile</title>
+</head>
+<body>
+    <header>
+        <h1>Client's Profile</h1>
+        <button onclick="location.href='ClientIndex.html'">Go to Main Page</button>
+    </header>
+    <main>
+        <div>
+            <img id="businessImage" src="" alt="Business Image">
+        </div>
+        <div id="businessInfo">
+            <!-- Business information will be populated here from the Firebase database -->
+        </div>
+        <button onclick="location.href='BusinessProfile.html'">Update Business</button>
+        <button onclick="sendEmail()">Update/Change Password or Email</button>
+    </main>
+</body>
+</html>
