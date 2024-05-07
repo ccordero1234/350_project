@@ -1,7 +1,7 @@
 import { db, app } from "../../firebaseConfig.js";
 import { getAuth } from "firebase/auth"
 import { collection, doc, getDoc, updateDoc, setDoc } from "firebase/firestore"
-import { dayToNumber, redirectTo } from "./functions.js"
+import { dayToNumber, redirectTo, getCurrentDateRange} from "./functions.js"
 
 let auth = getAuth(app);
 const docId = sessionStorage.getItem('selectedDocId');
@@ -10,7 +10,7 @@ const timesContainer = document.getElementById('times');
 const businessRef = doc(collection(db, 'businesses'), docId)
 let timeSlots = document.querySelectorAll('.time-slot');
 let businessData;
-let startOfWeek;
+let startOfWeek = new Date(new Date());
 
 getDoc(businessRef)
     .then((doc) => {
@@ -45,25 +45,8 @@ getDoc(businessRef)
         console.error('Error getting document:', error);
     });
 
-// Function to get the current date range
-function getCurrentDateRange() {
-    const today = new Date();
-    startOfWeek = new Date(today);
-    startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay()); // Get the start of the current week
-
-    const startDate = startOfWeek.getDate();
-
-    const endOfWeek = new Date(today);
-    endOfWeek.setDate(endOfWeek.getDate() + (6 - endOfWeek.getDay())); // Get the end of the current week
-    const endMonth = endOfWeek.toLocaleString('default', { month: 'long' });
-
-    const startMonth = startOfWeek.toLocaleString('default', { month: 'long' });
-
-    return `${startMonth} ${startDate}-${endMonth} ${endOfWeek.getDate()}`;
-}
-
 // Update the HTML content with the current date range
-document.getElementById('date-range').textContent = getCurrentDateRange();
+document.getElementById('date-range').textContent = getCurrentDateRange(startOfWeek);
 const availablityForm = document.getElementById('availablityForm');
 
 availablityForm.addEventListener('submit', function (event) {

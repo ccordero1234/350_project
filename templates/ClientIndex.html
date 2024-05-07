@@ -24,76 +24,28 @@
     </div>
   </header>
   <main>
-    <section class="today-schedule">
-      <h2>Today's Schedule</h2>
-      <div class="schedule-container">
-        <div class="time-slot">
-          <span class="time">9:00 AM</span>
-          <div class="appointment">
-          </div>
-        </div>
-        <div class="time-slot">
-          <span class="time">9:30 AM</span>
-          <div class="appointment">
-          </div>
-        </div>
-        <div class="time-slot">
-          <span class="time">5:00 PM</span>
-          <div class="appointment">
-          </div>
+    <section class="appointment-calendar">
+      <h2 id="date-range">Appointments Calendar</h2>
+      <div class="calendar-container">
+        <div class="days-of-week">
+          <select name="availableDays" id="availableDays">
+          
+          </select>
         </div>
       </div>
     </section>
     <section class="appointment-calendar">
-      <h2>Appointments Calendar</h2>
-      <div class="calendar-container">
-        <div class="calendar-header">
-          <button class="arrow">&#8592;</button>
-          <span>April 21 - April 27, 2024</span>
-          <button class="arrow">&#8594;</button>
-        </div>
-        <div class="days-of-week">
-          <span>Mon</span>
-          <span>Tue</span>
-          <span>Wed</span>
-          <span>Thu</span>
-          <span>Fri</span>
-        </div>
-        <div class="calendar-grid">
-          <div class="day">1</div>
-          <div class="day">2</div>
-          <div class="day">3</div>
-          <div class="day">4</div>
-          <div class="day">5</div>
-          <div class="day">6</div>
-          <div class="day">7</div>
-          <div class="day">8</div>
-          <div class="day">9</div>
-          <div class="day">10</div>
-          <div class="day">11</div>
-          <div class="day">12</div>
-          <div class="day">13</div>
-          <div class="day">14</div>
-          <div class="day">15</div>
-          <div class="day">16</div>
-          <div class="day">17</div>
-          <div class="day">18</div>
-          <div class="day">19</div>
-          <div class="day">20</div>
-          <div class="day">21</div>
-          <div class="day">22</div>
-          <div class="day">23</div>
-          <div class="day">24</div>
-          <div class="day">25</div>
-          <div class="day">26</div>
-          <div class="day">27</div>
-          <div class="day">28</div>
-          <div class="day">29</div>
-          <div class="day">30</div>
-        </div>
-      </div>
+      <div id="businessContainer"></div>
     </section>
-  </main>
+    </main>
+    <main>
+      <section class="today-schedule">
+        <h2 id="today-schedule">Today's Schedule</h2>
+        <div class="schedule-container">
+        </div>
+      </section>
+    </main>
+  <script src="../dist/clientIndex.js"></script>
 </body>
 
 </html>

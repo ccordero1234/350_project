@@ -19,6 +19,28 @@ export function redirectTo(page, route) {
             console.error('Error fetching ', error);
         });
 }
+// Function to get the current date range
+export function getCurrentDateRange(startOfWeek) {
+    const today = new Date();
+    startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay()); // Get the start of the current week
+
+    const startDate = startOfWeek.getDate();
+
+    const endOfWeek = new Date(today);
+    endOfWeek.setDate(endOfWeek.getDate() + (6 - endOfWeek.getDay())); // Get the end of the current week
+    const endMonth = endOfWeek.toLocaleString('default', { month: 'long' });
+
+    const startMonth = startOfWeek.toLocaleString('default', { month: 'long' });
+
+    return `${startMonth} ${startDate}-${endMonth} ${endOfWeek.getDate()}`;
+}
+
+// Function to get the current day in the format MM-DD
+export function getCurrentDay(now) {
+    const month = now.toLocaleString('default', { month: 'long' });
+    const day = now.getDate().toString();
+    return `${month}-${day}`;
+}
 
 // days to number
 export function dayToNumber(day) {
