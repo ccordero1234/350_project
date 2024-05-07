@@ -1,99 +1,110 @@
 body {
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #99d19c;
+  font-family: Arial, sans-serif;
 }
 
 .TopHeader {
   background-color: #333;
-  color: white;
-  align-items: center;
-  justify-content: center;
-}
-
-header {
-  background-color: #99d19c;
   color: #fff;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
+  padding: 15px;
 }
 
-header h1 {
-  font-size: 1.5rem;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 nav {
-  display: inline-block;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  display: flex;
 }
 
-nav li {
-  margin-right: 1rem;
+nav ul li {
+  margin-right: 20px;
 }
 
-nav a {
-  color: #fff;
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
   text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+nav ul li a:hover {
+  background-color: #99d19c;
+  color: #fff;
 }
 
 main {
-  padding: 2rem;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 800px;
 }
 
-section h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+h2 {
+  color: #333;
 }
 
-.today-schedule {
-  background-color: #fff;
-  border-radius: 4px;
-  padding: 1rem;
-}
-
-.today-schedule .schedule-container {
+.schedule-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
 }
 
-.today-schedule .time-slot {
-  width: calc(100% / 4);
-  text-align: center;
+.time-slot {
+  flex-basis: calc(33.33% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
-.today-schedule .time-slot .time {
+.time {
   font-weight: bold;
-  margin-bottom: 0.5rem;
 }
 
-.today-schedule .time-slot .appointment {
-  height: 50px;
-  background-color: #e0e0e0;
-  border-radius: 4px;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  /* Initially hide appointments */
-}
-
-.today-schedule .time-slot.booked .appointment {
+.appointment {
   background-color: #99d19c;
-  /* Change color for booked appointments */
+  height: 100px;
+  border-radius: 5px;
+}
+
+.appointment:hover {
+  background-color: #224b24;
+}
+
+.arrow {
+  background-color: #99d19c;
   color: #fff;
-  opacity: 1;
-  /* Show booked appointments */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  background-color: #224b24;
 }
 
 .appointment-calendar {
@@ -101,13 +112,14 @@ section h2 {
   border-radius: 4px;
   padding: 1rem;
   padding-right: max(25vw, 150px);
+  text-align: center;
 }
 
-.appointment-calendar .calendar-container {
+.calendar-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-
 
 .appointment-calendar .calendar-header {
   text-align: center;
