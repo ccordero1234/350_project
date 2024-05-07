@@ -4,47 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Appoint-Mint Client Dash</title>
+  <title>Appoint-Mint Client Dashboard</title>
   <link rel="stylesheet" href="../static/CSS/ClientIndexStyles.css">
 </head>
 
 <body>
   <header class="TopHeader">
-    Appoint-Mint Client Dash
+    <h1>Appoint-Mint Client Dashboard</h1>
   </header>
-  <header>
+  <nav>
     <div class="container">
-      <nav>
-        <ul>
-          <li><a href="#">Appointments</a></li>
-          <li><a href="BusinessProfile.html">Update Business</a></li>
-          <li><a href="ClientProfile.html">Profile</a></li>
-        </ul>
-      </nav>
+      <ul>
+        <li class="active"><a href="#">Appointments</a></li>
+        <li><a href="BusinessProfile.html">Update Business</a></li>
+        <li><a href="ClientProfile.html">Profile</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
   <main>
     <section class="appointment-calendar">
       <h2 id="date-range">Appointments Calendar</h2>
       <div class="calendar-container">
         <div class="days-of-week">
-          <select name="availableDays" id="availableDays">
-          
-          </select>
+          <select name="availableDays" id="availableDays"></select>
         </div>
       </div>
     </section>
-    <section class="appointment-calendar">
+    <section class="business-info">
+      <h2>Business Information</h2>
       <div id="businessContainer"></div>
     </section>
-    </main>
-    <main>
-      <section class="today-schedule">
-        <h2 id="today-schedule">Today's Schedule</h2>
-        <div class="schedule-container">
-        </div>
-      </section>
-    </main>
+    <section class="today-schedule">
+      <h2 id="today-schedule">Today's Schedule</h2>
+      <div class="schedule-container">
+      </div>
+    </section>
+  </main>
   <script src="../dist/clientIndex.js"></script>
 </body>
 

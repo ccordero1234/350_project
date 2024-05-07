@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background: linear-gradient(#99d19c, rgba(51, 51, 51, 0.8));
 }
 
 .TopHeader {
@@ -11,6 +12,10 @@ body {
   padding: 15px;
 }
 
+.TopHeader h1 {
+  margin: 0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -18,6 +23,8 @@ body {
 }
 
 nav {
+  background-color: #333;
+  color: white;
   padding: 10px 0;
   display: flex;
   justify-content: center;
@@ -28,6 +35,7 @@ nav ul {
   padding: 0;
   margin: 0;
   margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
 }
 
@@ -41,10 +49,15 @@ nav ul li:last-child {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   padding: 10px 15px;
   border-radius: 5px;
   white-space: nowrap;
+}
+
+nav ul li.active a {
+  background-color: #99d19c;
+  color: #fff;
 }
 
 nav ul li a:hover {
@@ -63,10 +76,15 @@ section {
   margin-bottom: 30px;
   width: 100%;
   max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
 h2 {
   color: #333;
+  margin-bottom: 20px;
 }
 
 .schedule-container {
@@ -108,11 +126,13 @@ h2 {
 }
 
 .appointment-calendar {
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 800px;
   background-color: #fff;
-  border-radius: 4px;
-  padding: 1rem;
-  padding-right: max(25vw, 150px);
-  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
 .calendar-container {
