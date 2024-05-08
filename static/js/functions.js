@@ -1,3 +1,6 @@
+import { db } from "../../firebaseConfig.js";
+import { collection, getDocs } from "firebase/firestore"
+
 export function redirectTo(page, route) {
     // Send a GET request to the router on the server
     fetch(route + "/" + page)
@@ -53,4 +56,32 @@ export function dayToNumber(day) {
         'Sunday': 6
     };
     return days[day] !== undefined ? days[day] : null;
+}
+
+export function convertToClockTime(timeStr) {
+    var timeParts = timeStr.split(':');
+    var hour = parseInt(timeParts[0]);
+    var minute = parseInt(timeParts[1]);
+
+    if (hour === 0) {
+        return `12:${minute.toString().padStart(2, '0')} AM`;
+    } else if (hour < 12) {
+        return `${hour}:${minute.toString().padStart(2, '0')} AM`;
+    } else if (hour === 12) {
+        return `${hour}:${minute.toString().padStart(2, '0')} PM`;
+    } else {
+        hour -= 12;
+        return `${hour}:${minute.toString().padStart(2, '0')} PM`;
+    }
+}
+
+export async function getName(customerID, user) {
+    const ref = collection(db, user);
+    const querySnapshot = await getDocs(ref);
+    const doc = querySnapshot.docs.find(doc => doc.data().userID === customerID);
+    if (doc) {
+        return doc.data().name;
+    } else {
+        return null; // or handle the case when the customerID is not found
+    }
 }
