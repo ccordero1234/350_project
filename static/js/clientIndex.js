@@ -1,12 +1,13 @@
 import { db, app } from "../../firebaseConfig.js";
 import { getAuth } from "firebase/auth"
 import { collection, getDoc, getDocs } from "firebase/firestore"
-import { getCurrentDateRange, getCurrentDay, dayToNumber } from "./functions"
+import { getCurrentDateRange, getCurrentDay, dayToNumber, convertToClockTime, getName } from "./functions"
 
 let auth = getAuth(app); 
 const today = new Date();
 const startOfWeek = new Date(today);
 const businessDoc = await findBusinessDoc()
+sessionStorage.setItem('selectedBusinessDoc', businessDoc.id);
 const appointmentRef = collection(businessDoc, "appointments");
 const availablityContainer = document.getElementById('availableDays');
 // Update the HTML content with the current date range
@@ -48,7 +49,7 @@ async function loadAppointments(day, reference) {
                     timeSpan.innerHTML = convertToClockTime(field);
                     const nameSpan = document.createElement('span');
                     nameSpan.classList.add('name');
-                    nameSpan.innerHTML = await getName(id);
+                    nameSpan.innerHTML = await getName(id, 'customer');
                     timeSlotDiv.appendChild(timeSpan);
                     timeSlotDiv.appendChild(nameSpan);
                     timeSlotsContainer.appendChild(timeSlotDiv);
@@ -56,34 +57,6 @@ async function loadAppointments(day, reference) {
             }
         }
     })
-}
-
-function convertToClockTime(timeStr) {
-    var timeParts = timeStr.split(':');
-    var hour = parseInt(timeParts[0]);
-    var minute = parseInt(timeParts[1]);
-
-    if (hour === 0) {
-        return `12:${minute.toString().padStart(2, '0')} AM`;
-    } else if (hour < 12) {
-        return `${hour}:${minute.toString().padStart(2, '0')} AM`;
-    } else if (hour === 12) {
-        return `${hour}:${minute.toString().padStart(2, '0')} PM`;
-    } else {
-        hour -= 12;
-        return `${hour}:${minute.toString().padStart(2, '0')} PM`;
-    }
-}
-
-async function getName(customerID) {
-    const customerRef = collection(db, 'customer');
-    const querySnapshot = await getDocs(customerRef);
-    const doc = querySnapshot.docs.find(doc => doc.data().userID === customerID);
-    if (doc) {
-        return doc.data().name;
-    } else {
-        return null; // or handle the case when the customerID is not found
-    }
 }
 
 const currentDay = getCurrentDay(today);

@@ -7,12 +7,18 @@
 </head>
 <body>
     <header>
-        <h1>Client's Profile</h1>
+        <h1 id="name">Client's Profile</h1>
         <button onclick="location.href='ClientIndex.html'">Go to Main Page</button>
     </header>
     <main>
         <div>
+            <h2 id="businessName"></h2>
             <img id="businessImage" src="" alt="Business Image">
+            <time id="timeOpen"></time>
+            <time id="timeClosed"></time>
+            <address id="businessAddress"></address>
+            <p id="description"></p>
+            <div id="daysOpen"></div>
         </div>
         <div id="businessInfo">
             <!-- Business information will be populated here from the Firebase database -->
@@ -20,5 +26,6 @@
         <button onclick="location.href='BusinessProfile.html'">Update Business</button>
         <button onclick="sendEmail()">Update/Change Password or Email</button>
     </main>
+    <script src="../dist/clientProfile.js"></script>
 </body>
 </html>
