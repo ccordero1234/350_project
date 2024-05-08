@@ -56,7 +56,9 @@ nav a {
     font-weight: bold;
     padding: 10px 20px;
     display: inline-block;
-    transition: background-color 0.3s ease;;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    white-space: nowrap;
 }
 
 nav a:hover {
