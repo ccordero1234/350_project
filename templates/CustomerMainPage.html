@@ -11,53 +11,60 @@
 <body>
 
     <header>
-        <div class="top-section">
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="">Most Recent</a></li>
-                        <li><a href="./CustomerBrowseBusinesses.html">Browse Businesses</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div>
-                <a href=""><img src="" alt=""></a>
-            </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="">Account</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        <nav>
+            <ul>
+                <li></li>
+                <li><h2 class="title">Appoint-Mint Customer Dashboard</h2></li>
+                <li><a href="./CustomerBrowseBusinesses.html">Browse Businesses</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="upcoming-appointments">
-        <h2 class="title">Section 1</h2>
-        <div>
-            <div>
-                <p>Pending Appointments</p>
-            </div>
-            <div>
+    <!-- Upcoming Appointments Section -->
+<section id="upcoming-appointments">
+    <h2 class="section-title">Upcoming Appointments</h2>
+    <div class="appointment-list">
+      <!-- Individual Appointment Item -->
+      <div class="appointment-item" id="appointment1">
+        <h3 class="appointment-title">Appointment Title</h3>
+        <p class="appointment-details">Details about the appointment...</p>
+        <p class="appointment-date">Date: <span class="date-info">MM/DD/YYYY</span></p>
+        <p class="appointment-time">Time: <span class="time-info">HH:MM AM/PM</span></p>
+      </div>
+      <!-- Add more appointment items as needed -->
+    </div>
+  </section>
 
-            </div>
-        </div>
-    </section>
-
-    <section id="most-recent">
-        <h2 class="title">Section 2</h2>
-        <div class="favorited-businesses">
-            <div><p>Businesses #1</p></div>
-            <div><p>Businesses #2</p></div>
-            <div><p>Businesses #3</p></div>
-        </div>
-    </section>
-
-    <section id="browse-businesses">
-        <h2 class="title">Section 3</h2>
-        <p>This is the third main section.</p>
-    </section>
+<div id="logoContainer" class="logo">
+    <!-- Logo will be inserted here by JavaScript -->
+  </div>
+  
+  <div id="businessNameContainer" class="business-names">
+    <!-- Business names will be inserted here by JavaScript -->
+  </div>
+  
+  <div id="appointmentDetailsContainer" class="appointment-details">
+    <!-- Appointment details will be inserted here by JavaScript -->
+  </div>
+  
+  <section class="recent-booked-appointments">
+    <h2>Recent Booked Appointments</h2>
+    <div class="appointments-container">
+      <!-- Business Box 1 -->
+      <div class="business-box" onclick="window.location.href='bookAppointment.html';">
+        <img src="path_to_logo1.png" alt="Business Logo 1">
+        <h3>Business Name 1</h3>
+        <p>Last Appointment: <strong>Appointment Details 1</strong></p>
+      </div>
+      <!-- Business Box 2 -->
+      <!-- ... other business boxes ... -->
+      <!-- No Recent Appointments Message -->
+      <div class="no-appointments" style="display: none;">
+        <p>No recent appointments booked.</p>
+      </div>
+    </div>
+  </section>
+  
 
     <footer>
         <p>&copy; 2024 Customer Main Page</p>
