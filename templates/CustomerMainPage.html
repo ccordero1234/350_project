@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/CSS/mainPage.css">
+    <title>Customer Main Page</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li></li>
+                <li><h2 class="title">Appoint-Mint Customer Dashboard</h2></li>
+                <li><a href="./CustomerBrowseBusinesses.html">Browse Businesses</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Upcoming Appointments Section -->
+<section id="upcoming-appointments">
+    <h2 class="section-title">Upcoming Appointments</h2>
+    <div class="appointment-list">
+      <!-- Individual Appointment Item -->
+      <!-- Add more appointment items as needed -->
+    </div>
+  </section>
+
+<div id="logoContainer" class="logo">
+    <!-- Logo will be inserted here by JavaScript -->
+  </div>
+  
+  <div id="businessNameContainer" class="business-names">
+    <!-- Business names will be inserted here by JavaScript -->
+  </div>
+  
+  <div id="appointmentDetailsContainer" class="appointment-details">
+    <!-- Appointment details will be inserted here by JavaScript -->
+  </div>
+  
+  <section class="recent-booked-appointments">
+    <h2>Recent Booked Appointments</h2>
+    <div class="appointments-container">
+      <!-- Business Box 1 -->
+      <div class="business-box" onclick="window.location.href='bookAppointment.html';">
+        <img src="" alt="Business Logo 1">
+        <h3>Business Name 1</h3>
+        <p>Last Appointment: <strong>Appointment Details 1</strong></p>
+      </div>
+      <!-- Business Box 2 -->
+      <!-- ... other business boxes ... -->
+      <!-- No Recent Appointments Message -->
+      <div class="no-appointments" style="display: none;">
+        <p>No recent appointments booked.</p>
+      </div>
+    </div>
+  </section>
+  
+
+    <footer>
+        <p>&copy; 2024 Customer Main Page</p>
+    </footer>
+    <script src="../dist/customerMainPage.js"></script>
+</body>
+
+</html>

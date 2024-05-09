@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#99d19c, rgba(51, 51, 51, 0.8));
+}
+
+.TopHeader {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.TopHeader h1 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+nav ul li.active a {
+  background-color: #99d19c;
+  color: #fff;
+}
+
+nav ul li a:hover {
+  background-color: #99d19c;
+  color: #fff;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.schedule-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.time-slot {
+  flex-basis: calc(33.33% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.time {
+  font-weight: bold;
+}
+
+.appointment {
+  background-color: #99d19c;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.appointment:hover {
+  background-color: #224b24;
+}
+
+.arrow {
+  background-color: #99d19c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  background-color: #224b24;
+}
+
+.appointment-calendar {
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appointment-calendar .calendar-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#businessContainer {
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+}
+
+#businessContainer img {
+  align-self: center;
+  height: 25vh; 
+  width: auto;
+}
+
+.time-slot {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(3, 1fr);
+}

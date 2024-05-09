@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <link rel="stylesheet" href="../static/CSS/bookAppointments.css">
+    <link id="businessImg" rel="icon" href="">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="nav-left"><a href="./CustomerBrowseBusinesses.html">Keep Browsing</a></li>
+                <li><h1>Book An Appointment</h1></li>
+                <li class="nav-right"><a href="./CustomerMainPage.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <div class="form-container">
+            <h1 id="businessName"></h1>
+            <form id="availablityForm">
+                <fieldset>
+                    <legend id="date-range" class="date-range"></legend>
+                    <select name="availableDays" id="availableDays">
+
+                    </select>
+                </fieldset>
+                <button type="submit">Check Availablity</button>
+            </form>
+            <div id="times">
+
+            </div>
+    </div>
+    <script src="../dist/bookAppointment.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header, .footer {
+    background-color: #99d19c;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 120px ;
+    padding-right: 120px;
+  }
+  
+  .btn {
+    background-color: #383d3b;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    font-size: large;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: black;
+  }
+
+  .appoint-mint-section {
+    display: flex;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.text-content {
+    flex: 1;
+    padding-left: 100px;
+    align-content: center;
+    color: #99d19c;
+}
+
+#description {
+    color: white;
+}
+
+.image-content {
+    flex: 1;
+    text-align: right;
+    padding-right: 100px;
+}
+
+.appoint-mint-section h1 {
+    margin-bottom: 10px;
+}
+
+.appoint-mint-section p {
+    margin-bottom: 20px;
+}
+
+.features-btn {
+    background-color: #99d19c;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+}
+
+.features-btn:hover {
+  background-color: black;
+  color: #fff;
+}
+
+/* Add any additional styling for the image here */
+.appoint-mint-section img {
+    max-width: 100%;
+    height: auto;
+}
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .sign-in-section {
+    background-color: #99d19c;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .sign-in-section h2 {
+    color: #333;
+  }
+  
+  .sign-in-section p {
+    color: black;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .sign-in-btn, .sign-up-btn {
+    padding: 20px 30px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+  }
+  
+  .sign-in-btn {
+    background-color: #333;
+    color: white;
+  }
+  .sign-in-btn:hover {
+    background-color: black;
+    color: #fff;
+  }
+  
+  .sign-up-btn {
+    background-color: #DDD;
+    color: black;
+  }
+
+  .sign-up-btn:hover {
+    background-color: black;
+    color: #fff;
+  }
+  
+  .web-section {
+    display: flex;
+    background-color: #333;
+    color: white;
+  }
+  
+  .content {
+    flex: 2;
+    padding: 20px;
+    padding-left: 120px ;
+    padding-right: 120px;
+  }
+  
+  .content h2 {
+    color: #99d19c;
+  }
+  
+  .content p {
+    margin-bottom: 20px;
+    padding-right: 120px;
+    text-align: justify;
+  }
+  
+  .get-started {
+    background-color: #99d19c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .features-section {
+    background-color: #99d19c; 
+    color: #333;
+    padding: 20px;
+    display: flex;
+    align-items:center;
+    text-align: justify;
+    padding-left: 120px ;
+    padding-right: 120px;
+  }
+  .features-text {
+    flex: 1;
+  }
+
+  .icon-description {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .footer-container {
+    background-color: #333; 
+    padding: 20px; 
+    text-align: center; 
+    font-family: 'Arial', sans-serif; 
+  }
+  
+  .footer-container a {
+    color: #99d19c; 
+    text-decoration: none; 
+    margin: 0 10px;
+  }
+  
+  .footer-container p {
+    color: white; 
+    margin: 10px 0; 
+  }
+
+  
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 20px;
+    height: 100vh;
+}
+.about-us h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+.about-us p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 70%;
+}
+.about-us .logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+.about-us .state-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.about-us .state-info span {
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+
+
+

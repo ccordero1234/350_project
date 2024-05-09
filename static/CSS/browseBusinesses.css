@@ -1,0 +1,123 @@
+:root {
+    --green: #333;
+    --grey: #383D3B;
+    font-family: Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header,
+#most-recent,
+footer {
+    background-color: var(--green);
+    color: var(--grey);
+}
+
+header {
+    height: max(7.2vh, 45px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li h2.title {
+    color: white;
+    font-size: min(24px, 6vw);
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+nav a:hover,
+nav .active a {
+    background-color: #99d19c;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.business {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.business:hover,
+.business.active {
+    border-color: transparent;
+    background-color: #333;
+}
+
+.business img {
+    height: 150px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.business h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.business p {
+    font-size: 14px;
+    text-align: center;
+}
+
+section {
+    min-height: calc(100vh - 150px); /* Adjust according to header and footer height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#99d19c, rgba(51, 51, 51, 0.8));
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--green);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

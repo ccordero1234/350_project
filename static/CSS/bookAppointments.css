@@ -1,0 +1,130 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(#99d19c, rgba(51, 51, 51, 0.8));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color:#333;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav h1 {
+    margin: 0;
+}
+
+.nav-left, .nav-right {
+    flex: 1;
+}
+
+.nav-left {
+    text-align: left;
+}
+
+.nav-right {
+    text-align: right;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-color: #99d19c;
+    color: var(--green);
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+#times {
+    display: none; /* Hide times by default */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.time-slot {
+    padding: 0.5rem;
+    background: #e3e3e3;
+    text-align: center;
+    cursor: pointer;
+}
+
+.time-slot:hover {
+    background: #d3d3d3;
+}
