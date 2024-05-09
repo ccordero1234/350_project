@@ -1,7 +1,7 @@
 import { db, app } from "../../firebaseConfig.js";
 import { getAuth } from "firebase/auth"
 import { collection, doc, getDoc, updateDoc, setDoc } from "firebase/firestore"
-import { dayToNumber, redirectTo, getCurrentDateRange} from "./functions.js"
+import { dayToNumber, redirectTo, getCurrentDateRange, getUserRef} from "./functions.js"
 
 let auth = getAuth(app);
 const docId = sessionStorage.getItem('selectedDocId');
@@ -144,9 +144,12 @@ timesContainer.addEventListener('click', async (event) => {
     const month = targetDate.toLocaleString('default', { month: 'long' });
     if (clickedTimeSlot) {
         const appointmentRef = doc(collection(businessRef, 'appointments'), `${month}-${day}`);
+        const userDocId = await getUserRef(auth.currentUser.uid, 'customer');
+        const userRef = doc(collection(db, 'customer'), userDocId)
+        const userAppointment = doc(collection(userRef, 'appointments'), `${month}-${day}`)
 
         try {
-            const docSnapshot = await getDoc(appointmentRef);
+            let docSnapshot = await getDoc(appointmentRef);
             const data = {
                 customerID: auth.currentUser.uid,
                 approved: false
@@ -165,8 +168,18 @@ timesContainer.addEventListener('click', async (event) => {
                 await setDoc(appointmentRef, { timeslots: [clickedTimeSlot], [clickedTimeSlot]: data });
             }
             console.log('Time slot added successfully');
-            redirectTo("CustomerMainPage.html", "templates");
             // Optionally, you can perform any UI updates here
+
+            docSnapshot = await getDoc(userAppointment);
+
+            if (docSnapshot.exists()) {
+                await updateDoc(userAppointment, { [clickedTimeSlot]: businessRef.id });
+            } else {
+                // If the document doesn't exist, create a new one with the clicked time slot
+                await setDoc(userAppointment, { [clickedTimeSlot]: businessRef.id });
+            }
+            // successfully added appointment to customer's collection
+            redirectTo("CustomerMainPage.html", "templates");
         } catch (error) {
             console.error('Error adding time slot:', error);
         }
