@@ -1,7 +1,6 @@
-import { db, app } from "../../firebaseConfig.js";
-import { getAuth } from "firebase/auth"
+import { db } from "../../firebaseConfig.js";
 import { collection, doc, getDoc} from "firebase/firestore"
-import { getUserRef } from "./functions.js"
+import { convertToClockTime, getUserRef } from "./functions.js"
 const today = new Date();
 const userUID = sessionStorage.getItem('userId');
 
@@ -45,7 +44,7 @@ async function loadAppointments(date) {
 
                             const timeElement = document.createElement('p');
                             timeElement.classList.add('appointment-time');
-                            timeElement.innerHTML = fieldId;
+                            timeElement.innerHTML =  convertToClockTime(fieldId);
 
                             appointmentItem.appendChild(titleElement);
                             appointmentItem.appendChild(detailsElement);
