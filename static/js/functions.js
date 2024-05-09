@@ -85,3 +85,14 @@ export async function getName(customerID, user) {
         return null; // or handle the case when the customerID is not found
     }
 }
+
+export async function getUserRef(identification, title) {
+    const ref = collection(db, title);
+    const querySnapshot = await getDocs(ref);
+    const doc = querySnapshot.docs.find(doc => doc.data().userID === identification);
+    if (doc) {
+        return doc.id;
+    } else {
+        return null; // or handle the case when the customerID is not found
+    }
+}

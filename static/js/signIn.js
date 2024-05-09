@@ -28,6 +28,7 @@ signInForm.addEventListener('submit', function (event) {
                     querySnapshot.forEach((doc) => {
                         // Access the data of each user document
                         const userData = doc.data();
+                        sessionStorage.setItem('userId', auth.currentUser.uid);
                         // Check the userType and redirect accordingly
                         if (userData.userType === "client") {
                             console.log("This user is a client.");
@@ -92,6 +93,7 @@ signUpForm.addEventListener('submit', function (event) {
             } catch (e) {
                 console.error("Error adding document: ", e);
             }
+            sessionStorage.setItem('userId', auth.currentUser.uid);
             // Check the title and redirect accordingly
             if (title === "client") {
                 console.log("This user is a client.");
