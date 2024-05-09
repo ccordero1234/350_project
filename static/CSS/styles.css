@@ -30,6 +30,10 @@ body {
     cursor: pointer;
   }
 
+  .btn:hover {
+    background-color: black;
+  }
+
   .appoint-mint-section {
     display: flex;
     background-color: #333;
@@ -68,6 +72,12 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     color: #333;
+    text-decoration: none;
+}
+
+.features-btn:hover {
+  background-color: black;
+  color: #fff;
 }
 
 /* Add any additional styling for the image here */
@@ -110,10 +120,19 @@ body {
     background-color: #333;
     color: white;
   }
+  .sign-in-btn:hover {
+    background-color: black;
+    color: #fff;
+  }
   
   .sign-up-btn {
     background-color: #DDD;
     color: black;
+  }
+
+  .sign-up-btn:hover {
+    background-color: black;
+    color: #fff;
   }
   
   .web-section {
